@@ -33,6 +33,6 @@ require __DIR__.'/auth.php';
 
 
 Route::controller(StudentController::class)->group(function () {
-    Route::get('/add-student', 'create');
-    Route::post('/add-student', 'store');
+    Route::get('/add-student/{id}', 'show');
+    Route::post('/orders', 'store');
 });

@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="url('add-student')" method="POST">
+                    <form action="" method="POST">
                         @csrf
                         <div>
                             <x-input-label for="name" :value="__('Name')" />
@@ -37,9 +37,9 @@
 
                         <div>
                             <center>
-                                <x-primary-button class="ms-3">
+                                <x-succes-button class="ms-3">
                                     {{ __('Add') }}
-                                </x-primary-button>
+                                </x-succes-button>
                             </center>
                         </div>
 
