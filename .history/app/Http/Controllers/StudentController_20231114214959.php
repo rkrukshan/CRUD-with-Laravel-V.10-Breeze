@@ -29,9 +29,9 @@ class StudentController extends Controller
      */
     public function store(StudentFormRequest $request)
     {
-        $data=$request->validated();
-        $student=Student::create($data);
-        return redirect('/add-student')->with('message','Saved Successfully');
+        $data=$request->
+
+        return redirect('dashboard')->with('message','Saved Successfully');
     }
 
     /**

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
-use App\Http\Requests\StudentFormRequest;
 
 class StudentController extends Controller
 {
@@ -29,9 +28,8 @@ class StudentController extends Controller
      */
     public function store(StudentFormRequest $request)
     {
-        $data=$request->validated();
-        $student=Student::create($data);
-        return redirect('/add-student')->with('message','Saved Successfully');
+
+        return redirect('dashboard')->with('message','Saved Successfully');
     }
 
     /**

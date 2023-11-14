@@ -8,7 +8,7 @@
     <div class="py-12">
     <center>
         <x-success-status class="mb-4" :status="session('message')" />
-        {{--  <x-validation-errors class="mb-4" :errors="$errors" />  --}}
+        <x-validation-errors class="mb-4" :status="session(':error=')" />
     </center>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">

@@ -30,7 +30,7 @@ class StudentController extends Controller
     public function store(StudentFormRequest $request)
     {
         $data=$request->validated();
-        $student=Student::create($data);
+        $student=Student::create();
         return redirect('/add-student')->with('message','Saved Successfully');
     }
 
