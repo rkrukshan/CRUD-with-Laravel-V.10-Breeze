@@ -37,5 +37,5 @@ Route::controller(StudentController::class)->group(function () {
     Route::post('/add-student', 'store');
     Route::get('/students', 'index');
     Route::get('/edit-student/{student_id}', 'edit');
-    Route::put('/update-student/{student_id}', 'update');
+    Route::u('/update-student/{student_id}', 'edit');
 });

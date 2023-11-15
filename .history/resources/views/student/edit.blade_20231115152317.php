@@ -15,7 +15,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form action="{{ url('update-student/'.$student->id) }}" method="POST">
                         @csrf
-                        @method('PUT')
+                        @method()
                         <div>
                             <x-input-label for="name" :value="__('Name')" />
                             <x-text-input id="name" class="block mt-1 w-full" type="name" name="name"

@@ -9,7 +9,7 @@ use App\Http\Requests\StudentFormRequest;
 class StudentController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.   
      */
     public function index()
     {
@@ -55,15 +55,9 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(StudentFormRequest $request, $student_id)
+    public function update(Request $request, string $id)
     {
-        $data=$request->validated();
-        $student = Student::where('id', $student_id)->update([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'phone' => $data['phone']
-        ]);
-        return redirect('/students')->with('message','Updated Successfully');
+
     }
 
     /**

@@ -63,7 +63,6 @@ class StudentController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone']
         ]);
-        return redirect('/students')->with('message','Updated Successfully');
     }
 
     /**

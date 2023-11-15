@@ -59,11 +59,8 @@ class StudentController extends Controller
     {
         $data=$request->validated();
         $student = Student::where('id', $student_id)->update([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'phone' => $data['phone']
+            'name'
         ]);
-        return redirect('/students')->with('message','Updated Successfully');
     }
 
     /**
