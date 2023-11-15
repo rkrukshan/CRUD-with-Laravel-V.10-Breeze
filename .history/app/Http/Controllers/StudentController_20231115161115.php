@@ -71,7 +71,6 @@ class StudentController extends Controller
      */
     public function destroy(string $student_id)
     {
-        $student = Student::find($student_id)->delete();
-        return redirect('/students')->with('message','Deleted Successfully');
+        $student = Stu
     }
 }

@@ -27,16 +27,18 @@
                         <td class="border border-slate-700 text-white ">{{ $student->name }}</td>
                         <td class="border border-slate-700 text-white ">{{ $student->email }}</td>
                         <td class="border border-slate-700 text-white ">{{ $student->phone }}</td>
+                        <td>
+                            <form action="{{ url('delete-student/'.$student->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <x-danger-button class="ms-3">
+                                    {{ __('Delete') }}
+                                </x-danger-button>
+                            </form>
+                        </td>
                         <td class="border border-slate-800 text-white">
                             <a href="{{ url('/edit-student/'.$student->id) }}"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
-                                <form action="{{ url('delete-student/'.$student->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <x-danger-button class="ms-3">
-                                        {{ __('Delete') }}
-                                    </x-danger-button>
-                                </form>
                             </td>
                             <td>
 

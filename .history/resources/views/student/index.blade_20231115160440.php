@@ -9,7 +9,7 @@
 
 
         <center>
-            <x-success-status class="mb-4" :status="session('message')" />
+        <x-success-status class="mb-4" :status="session('message')" />
 
             <table class="hover:table-fixed">
                 <tr>
@@ -17,7 +17,7 @@
                     <th width=10% class="border border-slate-700 text-white ">Name</th>
                     <th width=10% class="border border-slate-700 text-white ">Email</th>
                     <th width=10% class="border border-slate-700 text-white ">Phone</th>
-                    <th width=40% class="border border-slate-700 text-white ">Action</th>
+                    <th width=10% class="border border-slate-700 text-white ">Action</th>
                 </tr>
 
                 <tbody>
@@ -27,19 +27,16 @@
                         <td class="border border-slate-700 text-white ">{{ $student->name }}</td>
                         <td class="border border-slate-700 text-white ">{{ $student->email }}</td>
                         <td class="border border-slate-700 text-white ">{{ $student->phone }}</td>
-                        <td class="border border-slate-800 text-white">
+                        <td class="border border-slate-700 text-white">
                             <a href="{{ url('/edit-student/'.$student->id) }}"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
-                                <form action="{{ url('delete-student/'.$student->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <x-danger-button class="ms-3">
-                                        {{ __('Delete') }}
-                                    </x-danger-button>
-                                </form>
-                            </td>
-                            <td>
-
+                        </td>
+                        <td>
+                            <form action="{{ url('delete-student') }}" method="POST">
+                                @csrf
+                                
+                                <x <button  class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @empty
